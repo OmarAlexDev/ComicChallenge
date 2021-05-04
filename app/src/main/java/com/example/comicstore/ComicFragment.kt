@@ -9,11 +9,7 @@ import androidx.navigation.fragment.navArgs
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.comics_renglon.*
-import kotlinx.android.synthetic.main.comics_renglon.anio
-import kotlinx.android.synthetic.main.comics_renglon.marca
-import kotlinx.android.synthetic.main.comics_renglon.modelo
-import kotlinx.android.synthetic.main.comics_renglon.photo
+
 import kotlinx.android.synthetic.main.fragment_comic.*
 import kotlinx.android.synthetic.main.fragment_store.*
 
@@ -48,12 +44,15 @@ class ComicFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         photo.setImageResource(args.comic.picture)
-        modelo.text = args.comic.modelo
-        marca.text = args.comic.marca
-        anio.text = args.comic.anio
+        titulo.text = args.comic.title
+        issue_num.text = args.comic.issueNumber
+        descrip.text = args.comic.description
+        pageCount.text = args.comic.pageCount
+
+
 
         add_button.setOnClickListener {
-            val comic = Comic(args.comic.picture,args.comic.modelo,args.comic.marca,args.comic.anio)
+            val comic = Comic(args.comic.picture,args.comic.title,args.comic.issueNumber,args.comic.description,args.comic.pageCount)
             val id = reference.push().key
             reference.child(id!!).setValue(comic)
         }

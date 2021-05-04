@@ -37,21 +37,16 @@ class ComicsFragment : Fragment() {
 
     fun createData(): ArrayList<Comic>{
         val comics = ArrayList<Comic>()
-        comics.add(Comic(R.drawable.superman,"Find X", "Oppo","2018"))
-        comics.add(Comic(R.drawable.superman,"Iphone 12", "Apple","2020"))
-        comics.add(Comic(R.drawable.superman,"V60 ThinQ 5G", "LG","2020"))
-        comics.add(Comic(R.drawable.superman,"Mi 10", "Xiaomi","2020"))
-        comics.add(Comic(R.drawable.superman,"Mi 11", "Xiaomi","2020"))
-        comics.add(Comic(R.drawable.superman,"Note 20 Ultra", "Samsung","2020"))
-        comics.add(Comic(R.drawable.superman,"7 Pro", "Oneplus","2019"))
-        comics.add(Comic(R.drawable.superman,"8 Pro", "Oneplus","2020"))
-        comics.add(Comic(R.drawable.superman,"Nord", "Oneplus","2020"))
-        comics.add(Comic(R.drawable.superman,"Pixel 4a", "Google","2020"))
-        comics.add(Comic(R.drawable.superman,"Pixel 5", "Google","2020"))
-        comics.add(Comic(R.drawable.superman,"Note 10 Pro", "Redmi","2021"))
-        comics.add(Comic(R.drawable.superman,"7 Pro", "Realme","2020"))
-        comics.add(Comic(R.drawable.superman,"S21", "Samsung","2020"))
-        comics.add(Comic(R.drawable.superman,"S20 Ultra", "Samsung","2020"))
+        comics.add(Comic(R.drawable.superman,"Find X", "Oppo","2018","2"))
+        comics.add(Comic(R.drawable.superman,"Iphone 12", "Apple","2020","53"))
+        comics.add(Comic(R.drawable.superman,"V60 ThinQ 5G", "LG","2020","64"))
+        comics.add(Comic(R.drawable.superman,"Mi 10", "Xiaomi","2020","54"))
+        comics.add(Comic(R.drawable.superman,"Mi 11", "Xiaomi","2020","35"))
+        comics.add(Comic(R.drawable.superman,"Note 20 Ultra", "Samsung","2020","5"))
+        comics.add(Comic(R.drawable.superman,"7 Pro", "Oneplus","2019","73"))
+        comics.add(Comic(R.drawable.superman,"8 Pro", "Oneplus","2020","42"))
+        comics.add(Comic(R.drawable.superman,"Nord", "Oneplus","2020","73"))
+        comics.add(Comic(R.drawable.superman,"Pixel 4a", "Google","2020","42"))
 
 
         return comics

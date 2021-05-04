@@ -8,11 +8,12 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class ComicsAdapter (private val comics: List <Comic>): RecyclerView.Adapter<ComicsAdapter.ComicViewHolder>()  {
+class ComicsAdapter (private val comics: List <Comic>?): RecyclerView.Adapter<ComicsAdapter.ComicViewHolder>()  {
     inner class ComicViewHolder(renglon: View): RecyclerView.ViewHolder(renglon){
-        var modelo = renglon.findViewById<TextView>(R.id.modelo)
-        var marca = renglon.findViewById<TextView>(R.id.marca)
-        var anio = renglon.findViewById<TextView>(R.id.anio)
+        var titulo = renglon.findViewById<TextView>(R.id.titulo)
+        var descrip = renglon.findViewById<TextView>(R.id.descrip)
+        var issue_num = renglon.findViewById<TextView>(R.id.issue_num)
+        var pageCount = renglon.findViewById<TextView>(R.id.pageCount)
         var foto = renglon.findViewById<ImageView>(R.id.photo)
     }
 
@@ -23,11 +24,10 @@ class ComicsAdapter (private val comics: List <Comic>): RecyclerView.Adapter<Com
     }
 
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
-        val comic= comics[position]
+        val comic= comics!![position]
         holder.foto.setImageResource(comic.picture)
-        holder.modelo.text = comic.modelo
-        holder.anio.text = comic.anio
-        holder.marca.text = comic.marca
+        holder.titulo.text = comic.title
+        holder.issue_num.text = comic.issueNumber
         holder.itemView.setOnClickListener {
             val action = ComicsFragmentDirections.actionComicsFragmentToComicFragment(comic)
             holder.itemView.findNavController().navigate(action)
@@ -35,6 +35,6 @@ class ComicsAdapter (private val comics: List <Comic>): RecyclerView.Adapter<Com
     }
 
     override fun getItemCount(): Int {
-        return comics.size
+        return comics!!.size
     }
 }

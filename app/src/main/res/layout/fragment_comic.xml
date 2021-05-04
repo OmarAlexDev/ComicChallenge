@@ -16,48 +16,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/photo"
+        <ScrollView
+            android:id="@+id/scroll_comic"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@drawable/superman" />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/marca"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="marca"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/modelo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="modelo"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:srcCompat="@drawable/superman" />
 
-            <TextView
-                android:id="@+id/anio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="anio"
-                android:textColor="@color/purple_500"
-                android:textStyle="italic" />
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Título"
+                    android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/add_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Agregar a carrito" />
+                <TextView
+                    android:id="@+id/issue_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Número"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="italic" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/descrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pageCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Páginas"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/add_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar a carrito" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 

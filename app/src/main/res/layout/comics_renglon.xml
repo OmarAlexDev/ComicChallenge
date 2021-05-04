@@ -24,26 +24,18 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/modelo"
+                android:id="@+id/titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="modelo"
+                android:text="Título"
                 android:textColor="#4CAF50"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/marca"
+                android:id="@+id/issue_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="marca"
-                android:textColor="#4CAF50"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/anio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="anio"
+                android:text="Número"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
         </LinearLayout>
