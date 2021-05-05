@@ -45,14 +45,16 @@ class MainActivity : AppCompatActivity() {
 
                 if (responseFromService.isSuccessful) {
                     Log.i("Comics", results.results?.comics.toString())
+                    Toast.makeText(applicationContext, "Exit!", Toast.LENGTH_LONG).show()
 
-                    recyclerView = findViewById<RecyclerView>(R.id.comics_recycler).apply {
+
+                    /*recyclerView = findViewById<RecyclerView>(R.id.comics_recycler).apply {
 
                         layoutManager = manager
                         myAdapter = ComicsAdapter(results.results?.comics)
                         adapter = myAdapter
 
-                    }
+                    }*/
 
                 }  else {
                     Log.i("Comics", "No jaló")

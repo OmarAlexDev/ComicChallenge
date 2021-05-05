@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ComicsAdapter (private val comics: List <Comic>?): RecyclerView.Adapter<ComicsAdapter.ComicViewHolder>()  {
     inner class ComicViewHolder(renglon: View): RecyclerView.ViewHolder(renglon){
         var titulo = renglon.findViewById<TextView>(R.id.titulo)
-        var descrip = renglon.findViewById<TextView>(R.id.descrip)
         var issue_num = renglon.findViewById<TextView>(R.id.issue_num)
-        var pageCount = renglon.findViewById<TextView>(R.id.pageCount)
         var foto = renglon.findViewById<ImageView>(R.id.photo)
     }
 
