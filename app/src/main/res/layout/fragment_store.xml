@@ -47,7 +47,7 @@
         android:layout_marginBottom="78dp"
         android:capitalize="words"
         android:fontFamily="casual"
-        android:text="Conoce algunos de los dispositivos Android más recientes!"
+        android:text="Agrega los comics que más te interesen a tu carrito!"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"

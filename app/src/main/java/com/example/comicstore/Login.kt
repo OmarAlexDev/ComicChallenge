@@ -60,7 +60,7 @@ class Login : AppCompatActivity() {
                 bind.password.text.toString()
             ).addOnCompleteListener{
                 if(it.isSuccessful){
-                    Toast.makeText(this,"Bienvenido Maestro Pokemon!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Bienvenido al Mundo del Comic!", Toast.LENGTH_LONG).show()
                     //Crea un intento y entra a MainActivity.
                     startActivity(Intent(this,MainActivity::class.java))
 
@@ -74,7 +74,7 @@ class Login : AppCompatActivity() {
     private fun usuarioCreado(){
         val builder = AlertDialog.Builder(this)
         with(builder){
-            setTitle("usuario pokedex")
+            setTitle("usuario comicStore")
             setMessage("Usuario creado con éxito!")
             setPositiveButton("Ok",null)
             show()
