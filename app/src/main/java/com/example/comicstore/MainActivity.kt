@@ -2,8 +2,10 @@ package com.example.comicstore
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,16 +15,18 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class MainActivity : AppCompatActivity() {
-    private val BASE_URL = "http://gateway.marvel.com/v1/public/comics/"
-    private lateinit var results: Results
+
+    private val BASE_URL = "http://gateway.marvel.com/v1/public/"
+    lateinit var results: Results
     private lateinit var recyclerView: RecyclerView
     private lateinit var manager: RecyclerView.LayoutManager
     private lateinit var myAdapter: RecyclerView.Adapter<*>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        //getAllData()
+        setContentView(R.layout.fragment_comics)
+        manager = LinearLayoutManager(this)
+        getAllData()
 
     }
 
@@ -33,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
     }
+
     fun getAllData() {
 
         val callToService = getRetrofit().create(APIService::class.java)
@@ -44,17 +49,18 @@ class MainActivity : AppCompatActivity() {
 
 
                 if (responseFromService.isSuccessful) {
-                    Log.i("Comics", results.results?.comics.toString())
+                    Log.i("Comics", results.data?.results.toString())
                     Toast.makeText(applicationContext, "Exit!", Toast.LENGTH_LONG).show()
 
 
-                    /*recyclerView = findViewById<RecyclerView>(R.id.comics_recycler).apply {
+                    recyclerView = findViewById<RecyclerView>(R.id.comics_recycler).apply {
 
                         layoutManager = manager
-                        myAdapter = ComicsAdapter(results.results?.comics)
+                        myAdapter = ComicsAdapter(results.data?.results)
                         adapter = myAdapter
 
-                    }*/
+                    }
+
 
                 }  else {
                     Log.i("Comics", "No jaló")

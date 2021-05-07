@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.*
@@ -42,21 +43,16 @@ class ComicFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        photo.setImageResource(args.comic.picture)
-        titulo.text = args.comic.title
-        issue_num.text = args.comic.issueNumber
-        descrip.text = args.comic.description
-        pageCount.text = args.comic.pageCount
-
-
-
-        add_button.setOnClickListener {
-            val comic = Comic(args.comic.picture,args.comic.title,args.comic.issueNumber,args.comic.description,args.comic.pageCount)
-            val id = reference.push().key
-            reference.child(id!!).setValue(comic)
+        titulo.text = args.comic.data.results.get(0).title
+        issue_num.text = ("Número " + args.comic.data.results.get(0).issueNumber.toString())
+        pageCount.text = ("Número de páginas " + args.comic.data.results.get(0).pageCount.toString())
+        descrip.text = ("hola")
+        view?.let {
+            Glide.with(it)
+                .load(args.comic.data.results.get(0).thumbnail.path +"." + args.comic.data.results.get(0).thumbnail.extension)
+                .fitCenter()
+                .error(R.drawable.ic_launcher_background)
+                .into(photo)
         }
     }
-
-
 }

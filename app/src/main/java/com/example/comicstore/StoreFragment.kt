@@ -26,7 +26,7 @@ class StoreFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         comic_button.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_storeFragment_to_comicsFragment)
+           // view?.findNavController()?.navigate(R.id.action_storeFragment_to_comicsFragment)
         }
     }
 }

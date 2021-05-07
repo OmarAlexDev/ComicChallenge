@@ -4,8 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.comics_renglon.*
+import kotlinx.android.synthetic.main.fragment_comic.*
+import kotlinx.android.synthetic.main.fragment_comic.titulo
 import kotlinx.android.synthetic.main.fragment_comics.*
 
 
@@ -24,31 +29,7 @@ class ComicsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_comics, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        comics_recycler.apply {
-            // set a LinearLayoutManager to handle Android
-            // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
-            // set the custom adapter to the RecyclerView
-            adapter = ComicsAdapter(createData())
-        }
-    }
-
-    fun createData(): ArrayList<Comic>{
-        val comics = ArrayList<Comic>()
-        comics.add(Comic(R.drawable.superman,"Find X", "Oppo","2018","2"))
-        comics.add(Comic(R.drawable.superman,"Iphone 12", "Apple","2020","53"))
-        comics.add(Comic(R.drawable.superman,"V60 ThinQ 5G", "LG","2020","64"))
-        comics.add(Comic(R.drawable.superman,"Mi 10", "Xiaomi","2020","54"))
-        comics.add(Comic(R.drawable.superman,"Mi 11", "Xiaomi","2020","35"))
-        comics.add(Comic(R.drawable.superman,"Note 20 Ultra", "Samsung","2020","5"))
-        comics.add(Comic(R.drawable.superman,"7 Pro", "Oneplus","2019","73"))
-        comics.add(Comic(R.drawable.superman,"8 Pro", "Oneplus","2020","42"))
-        comics.add(Comic(R.drawable.superman,"Nord", "Oneplus","2020","73"))
-        comics.add(Comic(R.drawable.superman,"Pixel 4a", "Google","2020","42"))
-
-
-        return comics
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
     }
 }

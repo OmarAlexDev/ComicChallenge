@@ -2,15 +2,31 @@ package com.example.comicstore
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-
-data class Results(
-    var results:Comics?
-)
-
-data class Comics(
-    var comics:List<Comic>?
-)
+import kotlinx.android.parcel.RawValue
 
 @Parcelize
-data class Comic(val picture:Int, val title:String, val issueNumber:String, val description:String, val pageCount:String) :
-    Parcelable
+data class Results(
+    val data: @RawValue Data
+): Parcelable
+
+data class Data(
+    val results : MutableList<Comic>
+)
+
+data class Comic(
+    val title: String,
+    val issueNumber: Int,
+    val description: String,
+    val pageCount: Int,
+    val prices: MutableList<Info>,
+    val thumbnail: Thumbnail,
+)
+
+data class Thumbnail(
+    val path: String,
+    val extension: String
+)
+
+data class Info(
+    val price: Double
+)
