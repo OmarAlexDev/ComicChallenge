@@ -43,16 +43,21 @@ class ComicFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        titulo.text = args.comic.data.results.get(0).title
-        issue_num.text = ("Número " + args.comic.data.results.get(0).issueNumber.toString())
-        pageCount.text = ("Número de páginas " + args.comic.data.results.get(0).pageCount.toString())
+        titulo.text = args.comic.title
+        issue_num.text = ("Número " + args.comic.issueNumber.toString())
+        pageCount.text = ("Número de páginas " + args.comic.pageCount.toString())
         descrip.text = ("hola")
         view?.let {
             Glide.with(it)
-                .load(args.comic.data.results.get(0).thumbnail.path +"." + args.comic.data.results.get(0).thumbnail.extension)
+                .load(args.comic.thumbnail.path +"." + args.comic.thumbnail.extension)
                 .fitCenter()
                 .error(R.drawable.ic_launcher_background)
                 .into(photo)
+        }
+        add_button.setOnClickListener {
+            /*val comic = Comic(args.comic.data.results.get(0).title,args.comic.data.results.get(0).issueNumber,args.comic.data.results.get(0).pageCount.toString(),args.comic.data.results.get(0).description,)
+            val id = reference.push().key
+            reference.child(id!!).setValue(comic)*/
         }
     }
 }

@@ -10,17 +10,17 @@ data class Results(
 ): Parcelable
 
 data class Data(
-    val results : MutableList<Comic>
+    val results : MutableList<Comic>?
 )
-
+@Parcelize
 data class Comic(
     val title: String,
     val issueNumber: Int,
     val description: String,
     val pageCount: Int,
-    val prices: MutableList<Info>,
-    val thumbnail: Thumbnail,
-)
+    val prices: @RawValue MutableList<Info>,
+    val thumbnail: @RawValue Thumbnail,
+): Parcelable
 
 data class Thumbnail(
     val path: String,

@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
     }
 
     fun getAllData() {

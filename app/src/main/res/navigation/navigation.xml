@@ -10,7 +10,7 @@
         android:label="fragment_comics"
         tools:layout="@layout/fragment_comics" >
         <action
-            android:id="@+id/action_comicsFragment_to_comicFragment"
+            android:id="@+id/action_comicsFragment_to_comicFragment2"
             app:destination="@id/comicFragment" />
     </fragment>
     <fragment
@@ -20,6 +20,6 @@
         tools:layout="@layout/fragment_comic" >
         <argument
             android:name="comic"
-            app:argType="com.example.comicstore.Results" />
+            app:argType="com.example.comicstore.Comic" />
     </fragment>
 </navigation>

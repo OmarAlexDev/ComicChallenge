@@ -63,5 +63,11 @@
             android:textSize="24sp"
             android:textStyle="italic" />
 
+        <Button
+            android:id="@+id/add_Cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar al carrito" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
