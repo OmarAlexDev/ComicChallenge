@@ -9,8 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.comics_renglon.*
-import kotlinx.android.synthetic.main.fragment_comic.*
-import kotlinx.android.synthetic.main.fragment_comic.titulo
 import kotlinx.android.synthetic.main.fragment_comics.*
 
 

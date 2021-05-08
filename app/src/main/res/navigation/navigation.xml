@@ -2,24 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/comicFragment">
+    android:id="@+id/navigation">
     <fragment
         android:id="@+id/comicsFragment"
         android:name="com.example.comicstore.ComicsFragment"
         android:label="fragment_comics"
-        tools:layout="@layout/fragment_comics" >
-        <action
-            android:id="@+id/action_comicsFragment_to_comicFragment2"
-            app:destination="@id/comicFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/comicFragment"
-        android:name="com.example.comicstore.ComicFragment"
-        android:label="fragment_comic"
-        tools:layout="@layout/fragment_comic" >
-        <argument
-            android:name="comic"
-            app:argType="com.example.comicstore.Comic" />
-    </fragment>
+        tools:layout="@layout/fragment_comics" />
 </navigation>
