@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="Número de páginas"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="Número"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="Precio"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -87,10 +87,11 @@
             android:clickable="false"
             android:contextClickable="false"
             android:text="Agregar al carrito"
-            android:textColor="#DF916D"
+            android:textColor="#7F343A"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:background="@drawable/borderbtn" />
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginBottom="10sp"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

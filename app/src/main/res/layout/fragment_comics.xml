@@ -5,9 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".ComicsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/comics_recycler"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/comics_renglon" />
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comics_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="660dp"
+            tools:listitem="@layout/comics_renglon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cart"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="50sp"
+                android:backgroundTint="#7F343A"
+                android:text="Carrito"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/logoutbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:backgroundTint="#7F343A"
+                android:text="Log out"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>
